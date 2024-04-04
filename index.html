@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Timedoor Test </title>
+    <link rel="icon" href="/images/burger.jpg">
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <nav>
+        <div class="navbar">
+          <div class="nav-links">
+            <ul class="links">
+              <li><a href="/index.html">HOME</a></li>
+              <li><a href="/aboutUs.html">ABOUT US</a></li>
+              <li><a href="/blog.html">BLOG</a></li>
+              <li><a href="/carrer.html">CAREER</a></li>
+              <li><a href="/contact.html">CONTACT</a></li>
+            </ul>
+          </div>
+          <div class="search-box">
+            <div class="input-box">
+              <input type="text" placeholder="Search...">
+            </div>
+          </div>
+        </div>
+      </nav>
+
+    <div class="header">
+        <h1> Time Cafe Menu</h1>
+    </div>
+        <div class="container-product">
+            <div class="container">
+                <img src="/images/burger.jpg">
+                <div class="menuText">
+                    <h1>Burger Buzz</h1>
+                </div>
+                <div class="priceText">
+                    <h2>$<span id="burger">6.5</span></h2>
+                </div>
+                <button class="btn" onclick="total(1)"><span id="menuBurger">Add to Cart</span></button>
+            </div>
+            <div class="container">
+                <img src="/images/pizza.jpg">
+                <div class="menuText">
+                    <h1>Una Pizza</h1>
+                </div>
+                <div class="priceText">
+                    <h2>$<span id="pizza">15.5</span></h2>
+                </div>
+                <button class="btn" onclick="total(2)" id="menuPizza">Add to Cart </button>
+            </div>
+            <div class="container">
+                <img src="/images/sandwich.jpg">
+                <div class="menuText">
+                    <h1>Mr. Sandwich</h1>
+                </div>
+                <div class="priceText">
+                    <h2>$<span id="sandwich">5</span></h2>
+                </div>
+                <button class="btn" onclick="total(3)" id="menuSandwich">Add to Cart </button>
+            </div>
+           
+        </div>
+        <div class="total">
+          <h1>Total Payment : $<span id="total">0</span></h1>
+        </div>
+    <footer>
+        <div class="content">
+          <div class="top">
+            <div class="logo-details">
+              <span class="logo_name">DanzKopi</span>
+            </div>
+          </div>
+          <div class="link-boxes">
+            <ul class="box">
+              <li class="link_name"> Follow US </li>
+              <li><a href="#" target="_blank"> Instagram </a></li>
+              <li><a href="#" target="_blank">Youtube</a></li>
+              <li><a href="#" target="_blank"> Facebook</a></li>
+            </ul>
+            <ul class="box">
+              <li class="link_name"> Information </li>
+              <li><a href="#l"> Q & A </a></li>
+              <li><a href="#"> Cookies </a></li>
+            </ul>
+            <ul class="box">
+              <li class="link_name"><a href="#l"> Contact US </a></li>
+              <li><a href="#"> +62***1485*7*9* </a></li>
+              <li><a href="mailto:blabla@gmail.com"> blablabla@gmail.com</a></li>
+              <li><a>Indonesia</a></li>
+              <li><a href="https://www.google.com/maps/place/PT.Timedoor+Indonesia/@-8.6816532,115.2382658,17z/data=!3m1!4b1!4m5!3m4!1s0x2dd240f88bb37a69:0xdf8443f1fabfe305!8m2!3d-8.6816532!4d115.2404545"> Google Maps</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="bottom-details">
+          <div class="bottom_text">
+            <span class="copyright_text">Copyright © 2021 <a href="#">DanuhPutra.</a>All rights reserved</span>
+            <span class="policy_terms">
+              <a href="#">Privacy policy</a>
+              <a href="#">Terms & condition</a>
+            </span>
+          </div>
+        </div>
+      </footer>
+
+    <script>
+        var Burger = parseFloat(document.getElementById("burger").innerHTML) 
+        var Pizza = parseFloat(document.getElementById("pizza").innerHTML) 
+        var Sandwich = parseInt(document.getElementById("sandwich").innerHTML) 
+        var payment = document.getElementById('total');
+        var setTotal = 0
+        function total(totals){
+          if (totals == 1){
+            setTotal= setTotal + Burger;
+          }
+          if (totals == 2){
+            setTotal= setTotal + Pizza;
+          }
+          if (totals == 3){
+            setTotal= setTotal + Sandwich;
+          }
+
+          payment.innerHTML = setTotal;
+          console.log(setTotal)
+        }
+    </script>
+</body>
+</html>
